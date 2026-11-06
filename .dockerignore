@@ -1,0 +1,12 @@
+.git
+.gitignore
+.venv
+__pycache__
+*.pyc
+.env
+plans
+PROMPTS.md
+CLAUDE.md
+README.md
+Dockerfile
+.dockerignore

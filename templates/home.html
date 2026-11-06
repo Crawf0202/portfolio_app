@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<span class="file_label">Personnel File</span>
+<h1 class="display-6 fw-bold mt-2 mb-4">{{ profile.name }}</h1>
+<div class="row g-3 mb-4">
+  <div class="col-12 col-md-6">
+    <div class="fact h-100 p-3">
+      <div class="fact_label">Occupation</div>
+      <div class="fs-5">{{ profile.occupation }}</div>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="fact h-100 p-3">
+      <div class="fact_label">Degree</div>
+      <div class="fs-5">{{ profile.degree }}</div>
+    </div>
+  </div>
+</div>
+<h2 class="h5 fw-bold">Summary</h2>
+<p class="summary mb-0">{{ profile.summary }}</p>
+{% endblock %}

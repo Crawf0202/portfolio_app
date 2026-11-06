@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Skills{% endblock %}
+{% block content %}
+<span class="file_label">Skills</span>
+<h1 class="display-6 fw-bold mt-2 mb-3">Skills</h1>
+<p class="small text-body-secondary mb-3">Experience level: {{ levels.values()|join(" · ") }}</p>
+<ul class="list-group list-group-flush">
+  {% for skill in skills %}
+  <li class="list-group-item bg-transparent px-0 py-3">
+    <div class="row align-items-center g-2">
+      <div class="col-12 col-md-6 col-lg-7 fw-semibold">{{ skill.name }}</div>
+      <div class="col">
+        <div class="progress skill_meter" role="progressbar"
+             aria-label="{{ skill.name }}: {{ skill.label }}"
+             aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="{{ levels|length }}"
+             aria-valuetext="{{ skill.label }}">
+          <div class="progress-bar {{ 'bg-success' if skill.is_top else 'level_bar' }}" style="width: {{ skill.percent }}%"></div>
+        </div>
+      </div>
+      <div class="col-auto">
+        <span class="badge {{ 'text-bg-success' if skill.is_top else 'level_badge' }} level_text">{{ skill.label }}</span>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

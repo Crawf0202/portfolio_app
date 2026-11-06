@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<span class="file_label">Contact Information</span>
+<h1 class="display-6 fw-bold mt-2 mb-4">Get in touch</h1>
+<div class="row g-3">
+  <div class="col-12 col-md-6">
+    <div class="fact h-100 p-3">
+      <div class="fact_label">Phone</div>
+      <a class="fs-5 d-block mb-2" href="{{ phone_link }}">{{ contact.phone }}</a>
+      <a class="btn btn-outline-primary w-100" href="{{ phone_link }}">Call</a>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <div class="fact h-100 p-3">
+      <div class="fact_label">Email</div>
+      <a class="fs-5 d-block mb-2 text-break" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+      <a class="btn btn-outline-primary w-100" href="mailto:{{ contact.email }}">Send an email</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
