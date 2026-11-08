@@ -32,3 +32,9 @@ ensure this works on desktop, tablet and mobile devices. Use a responsive CSS Fr
 
 ## 2026-11-06 00:59 UTC
 Because the site is hosted on Google Cloud Run, and because we want to experience building a container during deployment, a static website is not an option. You cannot simply create an HTML/CSS/JS page; you must create a dynamic web app. I give you full choice as to what stack you want to use
+
+## 2026-11-08 17:21 UTC
+The app will later be deployed to Google Cloud Run from a GitHub repository, so it must read its port from the PORT environment variable (default 8080), and it needs a requirements.txt exported from Poetry. (Interrupted before any changes were made.)
+
+## 2026-11-08 17:21 UTC
+What tech stack are we using and how do I get it to work
